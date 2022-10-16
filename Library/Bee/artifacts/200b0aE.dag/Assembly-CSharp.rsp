@@ -380,6 +380,7 @@
 "Assets/scripts/MainBlockController.cs"
 "Assets/scripts/NoBlockController.cs"
 "Assets/scripts/PlayerController.cs"
+"Assets/scripts/VotingCreationController.cs"
 "Assets/scripts/VotingDefinition.cs"
 "Assets/scripts/YesBlockController.cs"
 -langversion:9.0
