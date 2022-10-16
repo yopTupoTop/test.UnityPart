@@ -12,7 +12,7 @@ public class VotingCreationController : MonoBehaviour
     private string url = "https://eth-goerli.g.alchemy.com/v2/UXgu_EbyllMg_u-9zYBiUB8q1k26QiQa";
     private string contractAddress = "0xa5eEdFeE89B5F181343AD612c48eFAf8FcF01a42";
 
-    private Button createButton;
+    [SerializeField] private Button createButton;
     private GameObject pKInput;
     private GameObject mPInput;
     private GameObject dataInput;
@@ -22,22 +22,18 @@ public class VotingCreationController : MonoBehaviour
 
     private void Start()
     {
-        createButton = GetComponentInChildren<Button>();
-        pKInput = transform.Find("privateKey").gameObject;
-        mPInput = transform.Find("merkleProof").gameObject;
-        dataInput = transform.Find("data").gameObject;
+        createButton.onClick.AddListener(AddVoting);
 
-        mPArrey = System.Text.Encoding.Default.GetBytes(mPInput.GetComponent<Text>().text);
+        pKInput = transform.Find("privateKey").gameObject;
+        mPInput = transform.GetChild(3).gameObject;
+        dataInput = transform.GetChild(2).gameObject;
+
+        mPArrey = System.Text.Encoding.Default.GetBytes(mPInput.transform.GetChild(1).GetComponent<Text>().text);
         foreach (byte b in mPArrey)
         {
             var bA = new byte[] { b };
             mPList.Add(bA);
         }
-    }
-
-    private void Awake()
-    {
-        createButton.onClick.AddListener(AddVoting);   
     }
 
     private void AddVoting()

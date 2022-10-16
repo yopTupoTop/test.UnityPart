@@ -57,11 +57,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets/scripts/NoBlockController.cs" />
+    <Compile Include="Assets/scripts/NoCountController.cs" />
     <Compile Include="Assets/scripts/MainBlockController.cs" />
+    <Compile Include="Assets/scripts/VotingCreationController.cs" />
+    <Compile Include="Assets/scripts/WindowsController.cs" />
     <Compile Include="Assets/scripts/YesBlockController.cs" />
     <Compile Include="Assets/scripts/VotingDefinition.cs" />
     <Compile Include="Assets/scripts/PlayerController.cs" />
-    <Compile Include="Assets/scripts/VotingCreationController.cs" />
+    <Compile Include="Assets/scripts/YesCountController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/net461dllsAOT/Nethereum.Model.dll" />

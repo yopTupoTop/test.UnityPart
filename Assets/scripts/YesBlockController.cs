@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Numerics;
@@ -23,6 +24,8 @@ public class YesBlockController : MonoBehaviour
     private GameObject ballotIdWindow;
     private Text ballotId;
 
+    public static event Action YesVoiceAdded;
+
     private void Start()
     {
         pKWindow = GameObject.Find("pKWindow");
@@ -46,6 +49,7 @@ public class YesBlockController : MonoBehaviour
     private void OnMouseDown()
     {
         StartCoroutine("AddYesVoice");
+        YesVoiceAdded();
     }
 
     public IEnumerator AddYesVoice()
@@ -59,4 +63,6 @@ public class YesBlockController : MonoBehaviour
 
         yield return transactionTransferRequest.SignAndSendTransaction(transactionMessage, contractAddress);
     }
+
+   
 }

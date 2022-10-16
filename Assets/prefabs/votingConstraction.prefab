@@ -205,6 +205,7 @@ GameObject:
   - component: {fileID: 1685227602444590413}
   - component: {fileID: 8448796751167142231}
   - component: {fileID: 2462196742701974809}
+  - component: {fileID: 5517173767786753102}
   m_Layer: 0
   m_Name: noCount
   m_TagString: Untagged
@@ -277,7 +278,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1261208035503451101}
-  m_Text: 0
+  m_Text: 
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -291,6 +292,19 @@ TextMesh:
   m_Color:
     serializedVersion: 2
     rgba: 4294967295
+--- !u!114 &5517173767786753102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261208035503451101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a21ee59bb64e943b5ba838050dd76803, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countText: {fileID: 2462196742701974809}
 --- !u!1 &7096030350489521531
 GameObject:
   m_ObjectHideFlags: 0
@@ -447,6 +461,7 @@ GameObject:
   - component: {fileID: 5385858815812388875}
   - component: {fileID: 862352927098303320}
   - component: {fileID: 3125925965894137709}
+  - component: {fileID: 3096395328653204443}
   m_Layer: 0
   m_Name: yesCount
   m_TagString: Untagged
@@ -519,7 +534,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7510512133256653782}
-  m_Text: 0
+  m_Text: 
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -533,6 +548,20 @@ TextMesh:
   m_Color:
     serializedVersion: 2
     rgba: 4294967295
+--- !u!114 &3096395328653204443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7510512133256653782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0696438187e83444cbe3414bb7cead2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countText: {fileID: 3125925965894137709}
+  controller: {fileID: 5860993570068676579}
 --- !u!1 &7781412898397786636
 GameObject:
   m_ObjectHideFlags: 0

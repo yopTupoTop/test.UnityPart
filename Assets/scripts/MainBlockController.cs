@@ -5,13 +5,16 @@ using UnityEngine;
 public class MainBlockController : MonoBehaviour
 {
     [SerializeField] private float radius;
+
+    [SerializeField] private GameObject message;
     private GameObject player;
-    private GameObject message;
+    [SerializeField] private GameObject votingConstruction;
+    [SerializeField] private GameObject mainBlock;
 
     private void Start()
     {
-        message = gameObject.transform.Find("message").gameObject;
-        player = GameObject.Find("player");
+        player = GameObject.FindGameObjectWithTag("Player");
+        Debug.Log(votingConstruction);
     }
 
     private void Update()
@@ -20,10 +23,19 @@ public class MainBlockController : MonoBehaviour
         {
             message.SetActive(true);
         }
+
+        if (Vector3.Distance(transform.position, player.transform.position) > radius)
+        {
+            message.SetActive(false);
+        }
     }
 
     private void OnMouseDown()
     {
-
+        if (Vector3.Distance(transform.position, player.transform.position) < radius)
+        {
+            mainBlock.SetActive(false);
+            votingConstruction.SetActive(true);
+        }
     }
 }

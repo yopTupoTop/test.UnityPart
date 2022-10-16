@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Numerics;
@@ -23,6 +24,8 @@ public class NoBlockController : MonoBehaviour
     private GameObject ballotIdWindow;
     private Text ballotId;
 
+    public static event Action NoVoiceAdded;
+
     private void Start()
     {
         pKWindow = GameObject.Find("pKWindow");
@@ -45,7 +48,8 @@ public class NoBlockController : MonoBehaviour
 
     private void OnMouseDown()
     {
-        StartCoroutine("AddYesVoice");
+        StartCoroutine("AddNoVoice");
+        NoVoiceAdded();
     }
 
     public IEnumerator AddNoVoice()

@@ -379,10 +379,13 @@
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/scripts/MainBlockController.cs"
 "Assets/scripts/NoBlockController.cs"
+"Assets/scripts/NoCountController.cs"
 "Assets/scripts/PlayerController.cs"
 "Assets/scripts/VotingCreationController.cs"
 "Assets/scripts/VotingDefinition.cs"
+"Assets/scripts/WindowsController.cs"
 "Assets/scripts/YesBlockController.cs"
+"Assets/scripts/YesCountController.cs"
 -langversion:9.0
 
 /deterministic
