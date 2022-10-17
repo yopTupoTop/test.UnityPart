@@ -1,17 +1,45 @@
 ﻿<Properties StartupConfiguration="{9BA4AD82-6475-6155-06F1-F21AB37D8A07}|">
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="2c00c175-69a4-46d8-acab-3556d0c7aa75" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/YesCountController.cs">
+    <Files>
+      <File FileName="Assets/scripts/VotingDefinition.cs" Line="144" Column="6" />
+      <File FileName="Assets/scripts/YesCountController.cs" Line="54" Column="28" />
+      <File FileName="Assets/scripts/NoCountController.cs" Line="40" Column="86" />
+      <File FileName="Assets/scripts/NoBlockController.cs" Line="52" Column="22" />
+      <File FileName="Assets/scripts/YesBlockController.cs" Line="55" Column="37" />
+      <File FileName="Assets/scripts/MainBlockController.cs" Line="36" Column="49" />
+      <File FileName="Assets/scripts/WindowsController.cs" Line="1" Column="1" />
+      <File FileName="Assets/scripts/PlayerController.cs" Line="1" Column="1" />
+      <File FileName="Assets/scripts/VotingCreationController.cs" Line="1" Column="1" />
+      <File FileName="Assets/scripts/VotingConstructionController.cs" Line="7" Column="4" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
-        <State name="__root__" />
+        <State name="__root__">
+          <Node name="testIzzzio-unityPart" expanded="True">
+            <Node name="Solution Items" expanded="True" />
+            <Node name="Assets" expanded="True">
+              <Node name="scripts" expanded="True">
+                <Node name="YesCountController.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
       </Pad>
       <Pad Id="MonoDevelop.Debugger.WatchPad">
         <State />
       </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="Unity" selected="True" />
+        </State>
+      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.Breakpoints />
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="b06120b0-22f4-4ee6-9509-971804f0d29c" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>

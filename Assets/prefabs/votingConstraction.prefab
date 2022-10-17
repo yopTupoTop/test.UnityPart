@@ -314,6 +314,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1698725007127489194}
+  - component: {fileID: 9011364590857390073}
   m_Layer: 0
   m_Name: votingConstraction
   m_TagString: Untagged
@@ -339,6 +340,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9011364590857390073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7096030350489521531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2486b6481adf84546b3addc338d9bcf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7423308518379839589
 GameObject:
   m_ObjectHideFlags: 0
@@ -561,7 +574,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   countText: {fileID: 3125925965894137709}
-  controller: {fileID: 5860993570068676579}
 --- !u!1 &7781412898397786636
 GameObject:
   m_ObjectHideFlags: 0

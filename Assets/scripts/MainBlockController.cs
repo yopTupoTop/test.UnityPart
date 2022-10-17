@@ -8,13 +8,13 @@ public class MainBlockController : MonoBehaviour
 
     [SerializeField] private GameObject message;
     private GameObject player;
-    [SerializeField] private GameObject votingConstruction;
-    [SerializeField] private GameObject mainBlock;
+    private GameObject votingConstruction;
+    private VotingConstructionController[] vCArrey;
 
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        Debug.Log(votingConstruction);
+        vCArrey = GameObject.FindObjectsOfType<VotingConstructionController>(true);
     }
 
     private void Update()
@@ -28,14 +28,28 @@ public class MainBlockController : MonoBehaviour
         {
             message.SetActive(false);
         }
+        foreach (var i in vCArrey)
+        {
+            if (Vector3.Distance(this.gameObject.transform.position, i.gameObject.transform.position) > radius)
+            {
+                i.gameObject.SetActive(false);
+                this.gameObject.SetActive(true);
+            }
+        }
     }
 
     private void OnMouseDown()
     {
         if (Vector3.Distance(transform.position, player.transform.position) < radius)
         {
-            mainBlock.SetActive(false);
-            votingConstruction.SetActive(true);
+            this.gameObject.SetActive(false);
+            foreach (var i in vCArrey)
+            {
+                if (Vector3.Distance(this.gameObject.transform.position, i.gameObject.transform.position) < radius)
+                {
+                    i.gameObject.SetActive(true);
+                }
+            }
         }
     }
 }

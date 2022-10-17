@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Numerics;
 using Nethereum.JsonRpc.UnityClient;
 using Nethereum.RPC;
@@ -18,6 +19,9 @@ public class YesCountController : MonoBehaviour
     private GameObject ballotIdWindow;
     private string ballotId;
 
+    private MainBlockController[] mBArrey;
+    private VotingConstructionController[] vCArrey;
+
     private void Start()
     {
         ballotIdWindow = GameObject.Find("ballotIdWindow");
@@ -25,6 +29,9 @@ public class YesCountController : MonoBehaviour
         ballotId = ballotIdWindow.GetComponentInChildren<InputField>().GetComponentInChildren<Text>().text;
         Debug.Log(ballotId);
         id = BigInteger.Parse(ballotId);
+
+        mBArrey = GameObject.FindObjectsOfType<MainBlockController>(true).Where(sr => !sr.gameObject.activeInHierarchy).ToArray();
+        vCArrey = GameObject.FindObjectsOfType<VotingConstructionController>();
 
         YesBlockController.YesVoiceAdded += UpdateYesCount;
         StartCoroutine("ChangeYesCount");
@@ -37,7 +44,15 @@ public class YesCountController : MonoBehaviour
 
         if (countText.text == "5")
         {
+            foreach (var i in mBArrey)
+            {
+                Destroy(i);
+            }
 
+            foreach (var j in vCArrey)
+            {
+                Destroy(j);
+            }
         }
     }
 

@@ -381,6 +381,7 @@
 "Assets/scripts/NoBlockController.cs"
 "Assets/scripts/NoCountController.cs"
 "Assets/scripts/PlayerController.cs"
+"Assets/scripts/VotingConstructionController.cs"
 "Assets/scripts/VotingCreationController.cs"
 "Assets/scripts/VotingDefinition.cs"
 "Assets/scripts/WindowsController.cs"
